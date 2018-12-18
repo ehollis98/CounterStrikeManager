@@ -1,0 +1,9 @@
+
+<Context docBase="counterStrikeManager" path="/counterStrikeManager" reloadable="true">
+    <Realm className="org.apache.catalina.realm.JDBCRealm"
+           driverName="com.mysql.jdbc.Driver"
+           connectionURL="jdbc:mysql://localhost:3306/counterstrikemanagerdatabase?user=root&amp;password=desktop1998"
+           userTable="user" userNameCol="user_name" userCredCol="pass"
+           userRoleTable="role" roleNameCol="role_name" >
+    </Realm>
+</Context>
