@@ -8,6 +8,7 @@ import java.util.Date;
 /**
  *
  * @author ehollis98
+ *
  */
 @Entity(name = "Report")
 @Table(name ="report")
@@ -60,9 +61,7 @@ public class Report {
     private String statisticType;
 
     @ManyToOne
-    @JoinColumn(name = "user_Id", foreignKey = @ForeignKey(name = "user_Id"))
-
-
+    @JoinColumn(name = "user_Id", foreignKey = @ForeignKey(name = "role_user_user_id_fk"))
     private User user;
 
     public User getUser() {
