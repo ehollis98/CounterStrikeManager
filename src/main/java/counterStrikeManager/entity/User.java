@@ -56,7 +56,10 @@ public class User {
     private String password;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private Set<Report> report = new HashSet<>();
+    private Set<Role> roles = new HashSet<>();
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Report> reports = new HashSet<>();
 
     /**
      * Gets id.
@@ -157,5 +160,60 @@ public class User {
                 ", username='" + username + '\'' +
                 ", userPassword='" + password + '\'' +
                 '}';
+    }
+
+    /**
+     * Gets reports.
+     *
+     * @return the reports
+     */
+    public Set<Report> getReports() {
+        return reports;
+    }
+
+    /**
+     * Sets reports.
+     *
+     * @param reports the reports
+     */
+    public void setReports(Set<Report> reports) {
+        this.reports = reports;
+    }
+
+    /**
+     * Gets roles.
+     *
+     * @return the roles
+     */
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    /**
+     * Sets roles.
+     *
+     * @param roles the roles
+     */
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
+
+    /**
+     * Add role.
+     *
+     * @param role the role
+     */
+    public void addRole(Role role) {
+        roles.add(role);
+    }
+
+    /**
+     * Remove role.
+     *
+     * @param role the role
+     */
+    public void removeRole(Role role) {
+        roles.remove(role);
+        role.setUser(null);
     }
 }
