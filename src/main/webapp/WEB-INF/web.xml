@@ -15,12 +15,13 @@
   </login-config>
 
 
-  <!-- Protect the admin page -->
+  <!-- Protection on the admin role -->
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>admin</web-resource-name>
       <url-pattern>/admin.jsp</url-pattern>
     </web-resource-collection>
+
     <auth-constraint>
       <role-name>admin</role-name>
     </auth-constraint>
@@ -28,6 +29,24 @@
 
   <security-role>
     <role-name>admin</role-name>
+  </security-role>
+
+
+  <!-- Protection on the user role-->
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>user</web-resource-name>
+      <url-pattern>/testLandingForUser.jsp</url-pattern>
+      <!--TODO add some pages to lock down for users-->
+    </web-resource-collection>
+
+    <auth-constraint>
+      <role-name>user</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <security-role>
+    <role-name>user</role-name>
   </security-role>
 
 
