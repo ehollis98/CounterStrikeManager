@@ -44,7 +44,7 @@ where a user can see their friend group online and track their progress or compa
 
 * [Screen Design](DesignDocuments/Screens.md)
 * [Application Flow](DesignDocuments/applicationFlow.md)
-* [Database Design](DesignDocuments/databaseDiagram.png)
+* [Database Design](DesignDocuments/erdDiagram.png)
 
 ### [Project Plan](ProjectPlan.md)
 
