@@ -26,7 +26,6 @@ public class Role {
     private User user;
 
 
-
     @Column(name="user_name")
     private String userName;
 
