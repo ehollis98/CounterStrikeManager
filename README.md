@@ -39,13 +39,3 @@ where a user can see their friend group online and track their progress or compa
 * Unit Testing
   * JUnit tests to achieve 80%+ code coverage 
 * IDE: IntelliJ IDEA
-
-### Design
-
-* [Screen Design](DesignDocuments/Screens.md)
-* [Application Flow](DesignDocuments/applicationFlow.md)
-* [Database Design](erdDiagram.png)
-
-### [Project Plan](ProjectPlan.md)
-
-### [Development Journal](Journal.md)
