@@ -6,7 +6,7 @@ Counter Strike Global Offensive is a popular videogame created by Valve that has
 offers the ability to see when your friends are online, but one must be in-game in order to see statistics and match overviews. I wanted to create a place
 where a user can see their friend group online and track their progress or compare inventory items, share crosshair types, see win/loss ratios, accuracy, and much more.
 
-
+[AWS Link](http://18.191.99.172:8080/CounterStrikeManager/)
 ### Project Technologies/Techniques 
 
 * Security/Authentication
