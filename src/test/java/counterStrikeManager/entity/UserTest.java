@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.Set;
 
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -59,7 +60,7 @@ class UserTest {
         assertEquals("ehollis98", retrievedUser.getUsername());
     }
 
-    
+
     /**
      * Verifies update successfully executes.
      */
@@ -72,6 +73,22 @@ class UserTest {
         User checkUser = (User) genericDAO.getById(1);
         String usernameAfterUpdate = checkUser.getUsername();
         assertNotEquals(usernameBeforeUpdate, usernameAfterUpdate);
+    }
+
+    /**
+     * Verifies the update of a user's role successfully executes.
+     */
+    @Test
+    void updateUserRoleSuccess() {
+        User updateUser = (User) genericDAO.getById(1);
+        int userRolesSize = updateUser.getRoles().size();
+        Role newRole = new Role();
+        newRole.setUser(updateUser);
+        newRole.setRoleName("user");
+        updateUser.addRole(newRole);
+        int updatedUserRolesSize = updateUser.getRoles().size();;
+        assertNotEquals(userRolesSize, updatedUserRolesSize);
+
     }
 
 
