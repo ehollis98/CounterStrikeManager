@@ -59,6 +59,7 @@ public class NewUserServlet extends HttpServlet {
         request.setAttribute("username", username);
         request.setAttribute("password", password);
 
+        logger.info("New user " + username + " was added to database.");
 
         //Forward result to jsp
         RequestDispatcher dispatcher = request.getRequestDispatcher("/newUserResult.jsp");
